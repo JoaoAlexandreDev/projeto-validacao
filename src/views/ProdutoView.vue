@@ -5,9 +5,9 @@
         <h2>Manutencao de Produtos</h2>
         <div class="search-bar">
             <RouterLink to="/add-produto">Adicionar</RouterLink>
-            <span>Pesquisar <input type="text"></span>
+            <span>Pesquisar <input type="text" v-model="filter"></span>
         </div>
-        <table>
+        <table :filters="filters">
             <thead>
                 <th>ID</th>
                 <th>SKU</th>
@@ -16,7 +16,7 @@
                 <th></th>
             </thead>
             <tbody>
-                <tr v-for="(product, index) in products" :key="index">
+                <tr v-for="(product, index) in filteredProducts" :key="index">
                     <td>{{ product.id }}</td>
                     <td>{{ product.sku }}</td>
                     <td>{{ product.descricao }}</td>
@@ -39,7 +39,8 @@ export default {
     name: 'ProdutoView',
     data() {
         return {
-            products: []
+            products: [],
+            filter: '',
         }
     },
     mounted() {
@@ -56,7 +57,19 @@ export default {
                 alert('Não foi possível excluir o item.');
             })
         }
-    }
+    },
+    computed: {
+        filteredProducts() {
+            return this.products.filter(product => {
+                const id = product.id.toString().toLowerCase();
+                const sku = product.sku.toLowerCase();
+                const descricao = product.descricao.toLowerCase();
+                const searchTerm = this.filter.toLowerCase();
+
+                return id.includes(searchTerm) || sku.includes(searchTerm) || descricao.includes(searchTerm);
+            });
+        }
+    },
 }
 </script>
 
@@ -95,4 +108,5 @@ th:nth-child(1) {
 
 td:last-child {
     text-align: center;
-}</style>
+}
+</style>
