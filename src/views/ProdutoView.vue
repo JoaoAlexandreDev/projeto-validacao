@@ -4,7 +4,7 @@
     <main>
         <h2>Manutencao de Produtos</h2>
         <div class="search-bar">
-            <RouterLink to="/add-produto">Adicionar</RouterLink>
+            <RouterLink to="/adicionar-produto">Adicionar</RouterLink>
             <span>Pesquisar <input type="text" v-model="filter"></span>
         </div>
         <table :filters="filters">
