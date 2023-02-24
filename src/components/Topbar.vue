@@ -3,7 +3,7 @@
 
 <template>
   <div class="topbar">
-    <img src="../assets/logo_turion.png" alt="Logomarca da Turion">
+    <RouterLink to="/"><img src="../assets/logo_turion.png" alt="Logomarca da Turion"></RouterLink>
     <h1>TECIDOS DIVERSOS LTDA</h1>
   </div>
 </template>
