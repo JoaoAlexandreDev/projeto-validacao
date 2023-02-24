@@ -6,8 +6,16 @@ import Sidebar from './components/Sidebar.vue'
 
 <template>
   <Topbar></Topbar>
-  <Sidebar></Sidebar>
+  <div class="main-content">
+    <Sidebar></Sidebar>
+    <RouterView />
+  </div>
 </template>
 
 <style scoped>
+.main-content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
 </style>
