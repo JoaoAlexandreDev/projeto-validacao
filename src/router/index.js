@@ -6,20 +6,25 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: 'Home',
       component: HomeView
     },
     {
       path: '/produto',
-      name: 'produto',
+      name: 'Produtos',
       component: () => import('../views/ProdutoView.vue')
     },
     {
       path: '/add-produto',
-      name: 'add-produto',
+      name: 'Adicionar Produtos',
       component: () => import('../views/AddProdutoView.vue')
     }
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  document.title = "Controle Almoxarifado - " + to.name;
+  next();
+});
 
 export default router
