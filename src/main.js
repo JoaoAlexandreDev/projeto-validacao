@@ -15,7 +15,7 @@ const app = createApp(App)
 
 app.component('fa', FontAwesomeIcon)
 
-app.use(money, {precision: 2})
+app.use(money, {precision: 2, decimal: ',', thousands: '.'})
 
 app.use(router)
 
