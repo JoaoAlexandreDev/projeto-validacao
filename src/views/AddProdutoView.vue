@@ -54,7 +54,6 @@
 
 <script>
 import api from "@/services/api";
-import Product from "@/domain/product/Product";
 
 export default {
     name: 'AddProdutoView',
