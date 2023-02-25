@@ -2,7 +2,7 @@
 
 <template>
     <main>
-        <h2>Manutencao de Produtos</h2>
+        <h2>Manutenção de Produtos</h2>
         <div class="search-bar">
             <RouterLink to="/adicionar-produto">Adicionar</RouterLink>
             <span>Pesquisar <input type="text" v-model="filter"></span>
@@ -11,7 +11,7 @@
             <thead>
                 <th>ID</th>
                 <th>SKU</th>
-                <th>Descricao</th>
+                <th>Descrição</th>
                 <th>Valor Custo</th>
                 <th></th>
             </thead>
