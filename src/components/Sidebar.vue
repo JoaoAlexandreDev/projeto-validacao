@@ -5,7 +5,7 @@
   <aside class="sidebar">
     <h3>Menu Opções</h3>
     <hr/>
-    <RouterLink to="/produto">Produto</RouterLink>
+    <RouterLink to="/produto" class="sibebar-link">Produto</RouterLink>
   </aside>
 </template>
 
@@ -15,5 +15,10 @@
   width: 150px;
   min-height: -webkit-fill-available;
   padding: 10px;
+}
+
+.sibebar-link {
+  color: #333;
+  text-decoration: none;
 }
 </style>

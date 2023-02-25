@@ -4,7 +4,7 @@
     <div class="main-content">
         <h2>Manutenção de Produtos</h2>
         <div class="search-bar">
-            <RouterLink to="/adicionar-produto">Adicionar</RouterLink>
+            <RouterLink to="/adicionar-produto" class="button">Adicionar</RouterLink>
             <span>Pesquisar <input type="text" v-model="filter"></span>
         </div>
         <table :filters="filters">
@@ -19,7 +19,7 @@
                 <tr v-for="(product, index) in filteredProducts" :key="index">
                     <td>{{ product.id }}</td>
                     <td>
-                        <RouterLink :to="{ name: 'Editar Produto', params: {id:product.id}}">{{ product.sku }}</RouterLink>
+                        <RouterLink :to="{ name: 'Editar Produto', params: {id:product.id}}" class="sku-link">{{ product.sku }}</RouterLink>
                     </td>
                     <td>{{ product.descricao }}</td>
                     <td>{{ product.valorCusto.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' }) }}</td>
@@ -88,10 +88,14 @@ export default {
 
 .search-bar {
     width: 100%;
+    height: 38px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+.search-bar input {
+    padding: 5px 0;
 }
 
 table,
@@ -112,5 +116,9 @@ th:nth-child(1) {
 
 td:last-child {
     text-align: center;
+}
+.sku-link {
+    color: #333;
+    text-decoration: none;
 }
 </style>

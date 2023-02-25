@@ -3,7 +3,7 @@
 
 <template>
   <div class="main-content">
-    <RouterLink to="/produto">Produto</RouterLink>
+    <RouterLink to="/produto" class="button">Produto</RouterLink>
   </div>
 </template>
 
@@ -11,8 +11,5 @@
 .main-content {
     width: 100%;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
 }
 </style>

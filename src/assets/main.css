@@ -6,3 +6,16 @@
 #app {
     height: 100vh;
 }
+
+.button {
+    background-color: #c3c3c3;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid black;
+    height: fit-content;
+}
+
+.button:hover {
+    cursor: pointer;
+}

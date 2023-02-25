@@ -17,7 +17,8 @@
                 </tr>
                 <tr>
                     <td>Descrição</td>
-                    <td><input type="text" class="input-descricao" name="descricao" v-model="product.descricao" minlength="5" maxlength="250">
+                    <td><input type="text" class="input-descricao" name="descricao" v-model="product.descricao"
+                            minlength="5" maxlength="250">
                         <p class="p-error" v-if="errors.input === 'descricao'">{{ errors.message }}</p>
                         <p>Campo não pode ser vazio</p>
                     </td>
@@ -43,10 +44,8 @@
                 </tr>
             </table>
             <div id="button-bar">
-                <button>
-                    <RouterLink to="/produto">Voltar</RouterLink>
-                </button>
-                <button>Gravar</button>
+                <RouterLink to="/produto" class="button">Voltar</RouterLink>
+                <button class="button">Gravar</button>
             </div>
         </form>
     </div>
@@ -147,7 +146,7 @@ td {
     padding: 10px;
 }
 
-tr > td:first-child {
+tr>td:first-child {
     width: 140px;
 }
 
