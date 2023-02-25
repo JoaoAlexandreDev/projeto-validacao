@@ -114,6 +114,10 @@ td {
     padding: 10px;
 }
 
+input:read-only {
+    background-color: #c3c3c3;
+}
+
 p {
     font-size: 14px;
     margin: 5px 0;
