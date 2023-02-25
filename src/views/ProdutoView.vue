@@ -2,7 +2,7 @@
 
 <template>
     <div class="main-content">
-        <h2>Manutenção de Produtos</h2>
+        <h2>ManutenÃ§Ã£o de Produtos</h2>
         <div class="search-bar">
             <RouterLink to="/adicionar-produto">Adicionar</RouterLink>
             <span>Pesquisar <input type="text" v-model="filter"></span>
@@ -11,7 +11,7 @@
             <thead>
                 <th>ID</th>
                 <th>SKU</th>
-                <th>Descrição</th>
+                <th>DescriÃ§Ã£o</th>
                 <th>Valor Custo</th>
                 <th></th>
             </thead>
@@ -55,9 +55,9 @@ export default {
             if (confirm('Deseja realmente excluir este produto?')) {
                 api.delete('/produto/' + product.id).then(response => {
                     this.products.splice(this.products.indexOf(product), 1);
-                    alert('Produto excluído com sucesso.');
+                    alert('Produto excluÃ­do com sucesso.');
                 }, err => {
-                    alert('Não foi possível excluir o produto.');
+                    alert('NÃ£o foi possÃ­vel excluir o produto.');
                 })
             }
         }

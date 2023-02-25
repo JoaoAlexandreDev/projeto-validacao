@@ -3,7 +3,7 @@
 
 <template>
   <aside class="sidebar">
-    <h3>Menu Opções</h3>
+    <h3>Menu OpÃ§Ãµes</h3>
     <hr/>
     <RouterLink to="/produto">Produto</RouterLink>
   </aside>

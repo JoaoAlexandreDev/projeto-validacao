@@ -13,10 +13,12 @@ import Sidebar from '../components/Sidebar.vue'
 </template>
 
 <style scoped>
-.main-content {
+.main-content, main {
   width: 100%;
-  height: inherit;
   display: flex;
   flex-direction: row;
+}
+.main-content {
+  height: inherit;
 }
 </style>

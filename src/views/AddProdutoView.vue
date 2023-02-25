@@ -2,7 +2,7 @@
 
 <template>
     <div class="main-content">
-        <h2>Inclusão de Produtos</h2>
+        <h2>InclusÃ£o de Produtos</h2>
         <form @submit.prevent="submitProduct(this)">
             <table>
                 <tr>
@@ -16,20 +16,20 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Descrição</td>
+                    <td>DescriÃ§Ã£o</td>
                     <td><input type="text" class="input-descricao" name="descricao" v-model="product.descricao" minlength="5" maxlength="250">
                         <p class="p-error" v-if="errors.input === 'descricao'">{{ errors.message }}</p>
-                        <p>Campo não pode ser vazio</p>
+                        <p>Campo nÃ£o pode ser vazio</p>
                     </td>
                 </tr>
                 <tr>
-                    <td>Data Referência</td>
+                    <td>Data ReferÃªncia</td>
                     <td><input type="date" name="dataReferencia" v-model="product.dataReferencia">
                         <p class="p-error" v-if="errors.input === 'dataReferencia'">{{ errors.message }}</p>
                     </td>
                 </tr>
                 <tr>
-                    <td>Valor Referência</td>
+                    <td>Valor ReferÃªncia</td>
                     <td>
                         <div class="input-group">
                             <div class="input-prefix">R$</div>
@@ -37,7 +37,7 @@
                                 id="valorCusto">
                         </div>
                         <p class="p-error" v-if="errors.input === 'valorCusto'">{{ errors.message }}</p>
-                        <p>Valor deverá ser
+                        <p>Valor deverÃ¡ ser
                             superior a 1.00</p>
                     </td>
                 </tr>
@@ -88,7 +88,7 @@ export default {
                             this.errors.input = err.response.data[0].field;
                             this.errors.message = err.response.data[0].userMessage;
                         }
-                        return alert('Não foi possível editar o produto.' + err.response.data[0].userMessage);
+                        return alert('NÃ£o foi posssÃ­vel editar o produto.\n\n' + err.response.data[0].userMessage);
                     })
                 }
             } else {
@@ -105,7 +105,7 @@ export default {
                             this.errors.input = err.response.data[0].field;
                             this.errors.message = err.response.data[0].userMessage;
                         }
-                        return alert('Não foi possível adicionar o produto.\n\n' + err.response.data[0].userMessage);
+                        return alert('NÃ£o foi possÃ­vel adicionar o produto.\n\n' + err.response.data[0].userMessage);
                     })
                 }
             }
@@ -117,7 +117,7 @@ export default {
                 this.product = response.data;
                 this.product.valorCusto = this.product.valorCusto.toFixed(2);
             }, err => {
-                alert('Produto não encontrado.');
+                alert('Produto nÃ£o encontrado.');
             })
         }
     }
