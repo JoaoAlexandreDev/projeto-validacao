@@ -20,7 +20,7 @@ const router = createRouter({
       component: () => import('../views/AddProdutoView.vue')
     },
     {
-      path: '/adicionar-produto/:id',
+      path: '/editar-produto/:id',
       name: 'Editar Produto',
       component: () => import('../views/AddProdutoView.vue')
     }
