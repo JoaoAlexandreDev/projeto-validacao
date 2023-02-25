@@ -2,11 +2,11 @@
 </script>
 
 <template>
-  <div class="sidebar">
+  <aside class="sidebar">
     <h3>Menu Opções</h3>
     <hr/>
     <RouterLink to="/produto">Produto</RouterLink>
-  </div>
+  </aside>
 </template>
 
 <style scoped>
