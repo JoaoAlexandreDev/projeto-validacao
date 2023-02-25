@@ -50,12 +50,14 @@ export default {
     },
     methods: {
         remove: function (product) {
-            api.delete('/produto/' + product.id).then(response => {
-                this.products.splice(this.products.indexOf(product), 1);
-                alert('Item excluído com sucesso.');
-            }, err => {
-                alert('Não foi possível excluir o item.');
-            })
+            if (confirm('Deseja realmente excluir este produto?')) {
+                api.delete('/produto/' + product.id).then(response => {
+                    this.products.splice(this.products.indexOf(product), 1);
+                    alert('Item excluído com sucesso.');
+                }, err => {
+                    alert('Não foi possível excluir o item.');
+                })
+            }
         }
     },
     computed: {
