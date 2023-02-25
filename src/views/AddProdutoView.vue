@@ -76,9 +76,10 @@ export default {
                 this.product.valorCusto = parseFloat(this.product.valorCusto.replace(",", "."));
 
                 api.post('/produto', this.product).then(response => {
-                    return alert('Produto adicionado com sucesso.');
+                    alert('Produto adicionado com sucesso.');
+                    return this.$router.push({ name: 'Produtos' })
                 }, err => {
-                    console.error(err);
+                    console.error(err.response);
                     if (err.response.data[0].field !== "") {
                         this.errors.input = err.response.data[0].field;
                         this.errors.message = err.response.data[0].userMessage;
