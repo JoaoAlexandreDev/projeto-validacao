@@ -2,10 +2,10 @@
 </script>
 
 <template>
-  <div class="topbar">
+  <header class="topbar">
     <RouterLink to="/"><img src="../assets/logo_turion.png" alt="Logomarca da Turion"></RouterLink>
     <h1>TECIDOS DIVERSOS LTDA</h1>
-  </div>
+  </header>
 </template>
 
 <style scoped>

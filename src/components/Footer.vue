@@ -2,9 +2,9 @@
 </script>
 
 <template>
-  <div class="footer">
+  <footer class="footer">
     <h4>Copyright &#169; 2021</h4>
-  </div>
+  </footer>
 </template>
 
 <style scoped>

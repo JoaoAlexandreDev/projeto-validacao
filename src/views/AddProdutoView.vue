@@ -1,7 +1,7 @@
 
 
 <template>
-    <main>
+    <div class="main-content">
         <h2>Inclusão de Produtos</h2>
         <form @submit.prevent="submitProduct(this)">
             <table>
@@ -49,7 +49,7 @@
                 <button>Gravar</button>
             </div>
         </form>
-    </main>
+    </div>
 </template>
 
 <script>
@@ -125,7 +125,7 @@ export default {
 </script>
 
 <style scoped>
-main {
+.main-content {
     width: 100%;
     padding: 20px;
     display: flex;

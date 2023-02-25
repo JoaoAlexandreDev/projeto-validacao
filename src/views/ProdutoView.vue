@@ -1,7 +1,7 @@
 
 
 <template>
-    <main>
+    <div class="main-content">
         <h2>Manutenção de Produtos</h2>
         <div class="search-bar">
             <RouterLink to="/adicionar-produto">Adicionar</RouterLink>
@@ -29,7 +29,7 @@
                 </tr>
             </tbody>
         </table>
-    </main>
+    </div>
 </template>
 
 <script>
@@ -78,7 +78,7 @@ export default {
 </script>
 
 <style scoped>
-main {
+.main-content {
     width: 100%;
     padding: 20px;
     display: flex;
