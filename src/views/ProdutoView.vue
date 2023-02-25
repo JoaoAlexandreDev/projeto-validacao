@@ -18,7 +18,9 @@
             <tbody>
                 <tr v-for="(product, index) in filteredProducts" :key="index">
                     <td>{{ product.id }}</td>
-                    <td>{{ product.sku }}</td>
+                    <td>
+                        <RouterLink :to="{ name: 'Editar Produto', params: {id:product.id}}">{{ product.sku }}</RouterLink>
+                    </td>
                     <td>{{ product.descricao }}</td>
                     <td>{{ product.valorCusto.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' }) }}</td>
                     <td><button @click="remove(product)">
@@ -53,9 +55,9 @@ export default {
             if (confirm('Deseja realmente excluir este produto?')) {
                 api.delete('/produto/' + product.id).then(response => {
                     this.products.splice(this.products.indexOf(product), 1);
-                    alert('Item excluído com sucesso.');
+                    alert('Produto excluído com sucesso.');
                 }, err => {
-                    alert('Não foi possível excluir o item.');
+                    alert('Não foi possível excluir o produto.');
                 })
             }
         }
